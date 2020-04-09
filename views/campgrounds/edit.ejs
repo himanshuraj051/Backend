@@ -1,0 +1,16 @@
+<%- include('../../partials/header'); -%>
+
+<body>
+
+    <div class="container" style="margin-top: 10%; padding: 10px;">
+    
+    <form action="/campgrounds/<%= campground._id %>?_method=put" method="post">
+        <input class="form-control" style="padding: 10px;" type="text" name="campground[name]" value=" <%= campground.name %>">
+        <input class="form-control" style="padding: 10px;" type="text" name="campground[image]" value="<%= campground.image %>">
+        <input class="form-control" style="padding: 10px;" type="text" name="campground[description]" value="<%= campground.description %>">
+        <button class="btn  btn-lg btn-primary btn-block " type="submit">add</button>
+     </form>
+     <a href="/campgrounds">go back</a>
+     </div >
+</body>
+</html>
